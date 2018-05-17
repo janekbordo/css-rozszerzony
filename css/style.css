@@ -92,18 +92,85 @@ input[type="tel"] {
     border: 3px solid red;
 }
 
-input[title~="input"] {
+input[title ~ ="input"] {
     border: 3px solid blue;
 }
 
-input[title*="rz"]{
+input[title*="rz"] {
     border: solid 3px green;
 }
 
-input[title^="pi"]{
+input[title^="pi"] {
     border: 3px solid violet;
 }
 
-input[title$="ci"]{
+input[title$="ci"] {
     border: 3px solid brown;
+}
+
+/*float*/
+
+.floated-inner {
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    float: left;
+
+}
+
+.clear {
+    clear: both;
+}
+
+.transition {
+    width: 150px;
+    height: 150px;
+    margin: 10px auto;
+
+}
+
+.transition#tr1 {
+    background-color: red;
+}
+
+.transition#tr2 {
+    background-color: green;
+}
+
+.transition#tr3 {
+    background-color: blue;
+}
+
+.transition#tr1:hover {
+    width: 300px;
+    transition-duration: 0.3s;
+}
+
+.transition#tr2:hover {
+    height: 300px;
+    transition-duration: 0.3s;
+}
+
+.transition#tr3:hover {
+    height: 300px;
+    width: 300px;
+    transition-duration: 0.3s;
+}
+
+.background {
+
+    height: 500px;
+/*    background-color: rgba(0,0,0,0.5);*/
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('https://www.dailydot.com/wp-content/uploads/9d5/38/e75c7558ce232e65.jpg');
+    background-repeat: no-repeat;
+    background-size: 150% 150%;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.overflow {
+    width:300px;
+    height: 300px;
+    border: 1px dashed #000;
+    overflow: auto;
 }
