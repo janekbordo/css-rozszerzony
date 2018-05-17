@@ -1,0 +1,109 @@
+/*selektor uniwersalny*/
+
+* {
+    color: red;
+}
+
+ul {
+    list-style: none;
+}
+
+/*pseudo-elementy*/
+
+ul li::before {
+    content: '+ ';
+}
+
+ul li::after {
+    content: ' asasa';
+}
+
+ul li::first-letter {
+    color: yellow;
+}
+
+#main-header .header-inner p::first-line {
+    color: beige;
+}
+
+/*
+jezeli podpinamy pseuuo-klasy do elementow link(a), to pamietamy porzadku:
+1. nieodwiedzone
+2. odwiedzone
+3. hover
+4. aktywne*/
+
+a:link {
+    color: pink;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: aquamarine;
+}
+
+a:active {
+    color: chartreuse;
+}
+
+/*
+input:focus {
+    border: 3px solid red;
+}
+*/
+
+div:target {
+    border: 1px solid black;
+}
+
+div:lang(pl) p {
+    color: blueviolet;
+}
+
+ul:first-child a {
+    color: violet;
+}
+
+ul:last-child a {
+    color: violet;
+}
+
+#only-child:only-child {
+    color: brown;
+}
+
+#second-ul li:nth-of-type(3) {
+    font-size: 20px;
+}
+
+#second-ul li:nth-of-type(3n+2) {
+    font-size: 30px;
+    color: green;
+}
+
+input[type] {
+    border: 3px solid #000;
+}
+
+input[type="tel"] {
+    border: 3px solid red;
+}
+
+input[title~="input"] {
+    border: 3px solid blue;
+}
+
+input[title*="rz"]{
+    border: solid 3px green;
+}
+
+input[title^="pi"]{
+    border: 3px solid violet;
+}
+
+input[title$="ci"]{
+    border: 3px solid brown;
+}
