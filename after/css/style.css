@@ -1,0 +1,30 @@
+.before {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    background-color: red;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.before::before {
+    content: '';
+    display: block;
+    /*    border-top: 1px solid black;*/
+    position: absolute;
+    width: calc(100% + 6px);
+    top: -6px;
+    left: -4px;
+    /*    height: calc(50% + 3px);*/
+    height: 0;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    transition: all 0.4s;
+
+}
+
+.before:hover::before {
+    border-top: 1px solid black;
+    height: calc(50% + 3px);
+}
